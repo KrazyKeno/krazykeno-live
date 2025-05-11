@@ -1,1 +1,1 @@
-// placeholder for blackjack data table
+// Blackjack table grid logic will go here

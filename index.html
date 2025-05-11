@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +8,9 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Krazy Keno Logo" id="logo"/>
     <h1>Krazy Keno Dashboard</h1>
-    <p>Live jackpot data, combo hits, blackjack odds</p>
+    <p>Live combo tracking and blackjack table odds</p>
   </header>
 
   <nav>
@@ -22,6 +22,7 @@
   </nav>
 
   <main>
+    <div id="loader">Loading data...</div>
     <section id="pick5" class="tab">Loading Pick 5 Data...</section>
     <section id="pick7" class="tab">Loading Pick 7 Data...</section>
     <section id="pick8" class="tab">Loading Pick 8 Data...</section>
@@ -30,13 +31,12 @@
   </main>
 
   <footer>
-    <div id="progress-bar"></div>
+    <p>Live Supabase sync enabled</p>
   </footer>
 
+  <script src="dashboard.js"></script>
   <script src="supabase.js"></script>
   <script src="comboAnalytics.js"></script>
   <script src="blackjack.js"></script>
-  <script src="progressBar.js"></script>
-  <script src="dashboard.js"></script>
 </body>
 </html>
