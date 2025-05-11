@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krazy Keno Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Krazy Keno Dashboard</h1>
+    <p>Live jackpot data, combo hits, blackjack odds</p>
+  </header>
+
+  <nav>
+    <button onclick="showTab('pick5')">Pick 5</button>
+    <button onclick="showTab('pick7')">Pick 7</button>
+    <button onclick="showTab('pick8')">Pick 8</button>
+    <button onclick="showTab('20card')">20-Card</button>
+    <button onclick="showTab('blackjack')">21 Tables</button>
+  </nav>
+
+  <main>
+    <section id="pick5" class="tab">Loading Pick 5 Data...</section>
+    <section id="pick7" class="tab">Loading Pick 7 Data...</section>
+    <section id="pick8" class="tab">Loading Pick 8 Data...</section>
+    <section id="20card" class="tab">Loading 20-Card Data...</section>
+    <section id="blackjack" class="tab">Loading Blackjack Data...</section>
+  </main>
+
+  <footer>
+    <div id="progress-bar"></div>
+  </footer>
+
+  <script src="supabase.js"></script>
+  <script src="comboAnalytics.js"></script>
+  <script src="blackjack.js"></script>
+  <script src="progressBar.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
