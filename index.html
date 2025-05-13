@@ -1,42 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Krazy Keno Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Krazy Keno Logo" id="logo"/>
-    <h1>Krazy Keno Dashboard</h1>
-    <p>Live combo tracking and blackjack table odds</p>
+    <img src="logo.png" alt="Krazy Keno Logo" class="logo">
+    <h1>KRAZY KENO DASHBOARD</h1>
   </header>
-
   <nav>
-    <button onclick="showTab('pick5')">Pick 5</button>
-    <button onclick="showTab('pick7')">Pick 7</button>
-    <button onclick="showTab('pick8')">Pick 8</button>
-    <button onclick="showTab('20card')">20-Card</button>
-    <button onclick="showTab('blackjack')">21 Tables</button>
+    <button onclick="loadPick('pick5')">Pick 5</button>
+    <button onclick="loadPick('pick6')">Pick 6</button>
+    <button onclick="loadPick('pick7')">Pick 7</button>
+    <button onclick="loadPick('pick8')">Pick 8</button>
+    <button onclick="loadPick('blackjack')">21 Tables</button>
   </nav>
-
   <main>
-    <div id="loader">Loading data...</div>
-    <section id="pick5" class="tab">Loading Pick 5 Data...</section>
-    <section id="pick7" class="tab">Loading Pick 7 Data...</section>
-    <section id="pick8" class="tab">Loading Pick 8 Data...</section>
-    <section id="20card" class="tab">Loading 20-Card Data...</section>
-    <section id="blackjack" class="tab">Loading Blackjack Data...</section>
+    <section id="content">Loading Data...</section>
   </main>
-
-  <footer>
-    <p>Live Supabase sync enabled</p>
-  </footer>
-
-  <script src="dashboard.js"></script>
   <script src="supabase.js"></script>
-  <script src="comboAnalytics.js"></script>
-  <script src="blackjack.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
