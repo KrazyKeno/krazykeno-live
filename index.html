@@ -1,27 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Krazy Keno Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Krazy Keno Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Krazy Keno Logo" class="logo">
-    <h1>KRAZY KENO DASHBOARD</h1>
-  </header>
-  <nav>
-    <button onclick="loadPick('pick5')">Pick 5</button>
-    <button onclick="loadPick('pick6')">Pick 6</button>
-    <button onclick="loadPick('pick7')">Pick 7</button>
-    <button onclick="loadPick('pick8')">Pick 8</button>
-    <button onclick="loadPick('blackjack')">21 Tables</button>
-  </nav>
-  <main>
-    <section id="content">Loading Data...</section>
-  </main>
-  <script src="supabase.js"></script>
-  <script src="dashboard.js"></script>
+    <div id="app">
+        <img src="logo.png" alt="Krazy Keno Logo" width="150">
+        <h1>KRAZY KENO DASHBOARD</h1>
+        <div id="dataDisplay">Loading data...</div>
+    </div>
+    <script src="supabase.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

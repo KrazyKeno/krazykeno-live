@@ -1,10 +1,11 @@
-
-async function loadPick(type) {
-  const { data, error } = await db.from(type).select('*').limit(10);
-  const container = document.getElementById('content');
-  if (error) {
-    container.innerText = 'Error loading data: ' + error.message;
-  } else {
-    container.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
-  }
+async function loadData() {
+    const { data, error } = await supabase.from('pick5').select('*');
+    const display = document.getElementById('dataDisplay');
+    if (error) {
+        display.textContent = 'Error loading data.';
+        console.error(error);
+    } else {
+        display.textContent = JSON.stringify(data);
+    }
 }
+loadData();
