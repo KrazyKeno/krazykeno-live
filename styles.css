@@ -1,9 +1,1 @@
-
-body { background: #111; color: #fff; font-family: sans-serif; margin: 0; text-align: center; }
-.logo { width: 120px; margin-top: 1em; }
-nav button { padding: 10px; margin: 5px; font-size: 1em; }
-.heatmap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; padding: 20px; }
-.heat-card { padding: 10px; border-radius: 8px; color: #000; font-weight: bold; }
-.green { background: #90ee90; }
-.yellow { background: #fff176; }
-.red { background: #ff8a80; }
+body { background: #111; color: #fff; font-family: sans-serif; }

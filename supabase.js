@@ -1,1 +1,1 @@
-// Supabase live feed placeholder
+// Supabase live feed logic
