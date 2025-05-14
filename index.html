@@ -1,20 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Krazy Keno Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <img src="logoKK.png" alt="Krazy Keno Logo" width="200" />
+    <img src="logoKK.png" class="logo" alt="Krazy Keno Logo">
     <h1>KRAZY KENO DASHBOARD</h1>
-    <p>Live data feed test active</p>
   </header>
+  <nav>
+    <button onclick="showTab('pick')">Pick 5–8</button>
+    <button onclick="showTab('blackjack')">21 Tables</button>
+  </nav>
   <main>
-    <section id="content">Loading Data...</section>
+    <section id="pick" style="display:block;">
+      <div id="comboDisplay">Live Pick Combos Loading...</div>
+    </section>
+    <section id="blackjack" style="display:none;">
+      <div class="heatmap-grid" id="blackjackGrid">Loading Blackjack Tables...</div>
+    </section>
   </main>
   <script src="supabase.js"></script>
   <script src="dashboard.js"></script>
+  <script>
+    function showTab(tab) {
+      document.getElementById('pick').style.display = (tab === 'pick') ? 'block' : 'none';
+      document.getElementById('blackjack').style.display = (tab === 'blackjack') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
