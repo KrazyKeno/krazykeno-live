@@ -1,3 +1,2 @@
-
-// Placeholder for Supabase feed logic
-console.log("Supabase logic loaded");
+// Example placeholder script
+console.log("Supabase live sync would initialize here.");
