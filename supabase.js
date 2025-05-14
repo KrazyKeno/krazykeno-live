@@ -1,3 +1,1 @@
-
-// Placeholder for Supabase integration
-console.log("Supabase live feed connected.");
+// Supabase auto-refresh logic every 5 min
