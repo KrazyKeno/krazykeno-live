@@ -1,37 +1,15 @@
 
 body {
-  background-color: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
-.logo {
-  width: 100px;
-  margin: 20px;
+header img {
+    margin-top: 20px;
 }
-nav button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 1em;
-}
-.heatmap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 20px;
-}
-.heat-card {
-  background-color: #eee;
-  border-radius: 8px;
-  padding: 10px;
-  font-weight: bold;
-  color: #000;
-}
-.green { background-color: #90ee90; }
-.yellow { background-color: #fff176; }
-.red { background-color: #ff8a80; }
-@media (max-width: 768px) {
-  .heatmap-grid { grid-template-columns: 1fr; }
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
 }

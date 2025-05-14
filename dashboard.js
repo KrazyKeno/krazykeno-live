@@ -1,22 +1,16 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-  const combos = [
-    { combo: [3, 8, 27, 33, 45], hits: 15 },
-    { combo: [1, 12, 22, 38, 47], hits: 11 },
-    { combo: [5, 9, 18, 21, 40], hits: 9 }
-  ];
-  const ul = document.getElementById("comboChart");
-  ul.innerHTML = combos.map(c => `<li>${JSON.stringify(c.combo)} - ${c.hits} hits</li>`).join("");
+async function loadPickCombos() {
+    document.getElementById('content').innerHTML = "<h2>Pick 5 - Top Combos</h2>" +
+        "<p>[3,8,27,33,45] – 15 hits</p>" +
+        "<p>[1,12,22,38,47] – 11 hits</p>" +
+        "<p>[5,9,18,21,40] – 9 hits</p>";
+}
 
-  const tables = [
-    { casino: "El Cortez", decks: 1, payout: "3:2", min: "$5", edge: "0.18%", color: "green" },
-    { casino: "Bellagio", decks: 6, payout: "3:2", min: "$15", edge: "0.50%", color: "yellow" },
-    { casino: "Resorts World", decks: 8, payout: "6:5", min: "$25", edge: "1.90%", color: "red" }
-  ];
-  const grid = document.getElementById("blackjackGrid");
-  grid.innerHTML = tables.map(t =>
-    `<div class="heat-card ${t.color}">
-      ${t.casino}<br>Decks: ${t.decks}<br>Payout: ${t.payout}<br>Min: ${t.min}<br>Edge: ${t.edge}
-    </div>`
-  ).join('');
-});
+async function loadBlackjack() {
+    document.getElementById('content').innerHTML = "<h2>Blackjack Tables</h2>" +
+        "<div style='display:flex;justify-content:center;gap:20px'>" +
+        "<div style='background:#8f8;padding:10px'>El Cortez<br>Decks: 1<br>Payout: 3:2<br>Min: $5<br>Edge: 0.18%</div>" +
+        "<div style='background:#ff8;padding:10px'>Bellagio<br>Decks: 6<br>Payout: 3:2<br>Min: $15<br>Edge: 0.50%</div>" +
+        "<div style='background:#f88;padding:10px'>Resorts World<br>Decks: 8<br>Payout: 6:5<br>Min: $25<br>Edge: 1.90%</div>" +
+        "</div>";
+}
