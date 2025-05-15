@@ -1,11 +1,11 @@
-
 body {
+  background-color: #121212;
+  color: #fefefe;
   font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #f8f8f8;
   text-align: center;
+  padding: 50px;
 }
-header img {
-  height: 60px;
-  margin: 20px;
+#app img {
+  width: 100px;
+  margin-bottom: 20px;
 }
