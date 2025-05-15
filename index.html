@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>KRAZY KENO FINAL</title>
-  <script src="supabase.js"></script>
-  <script src="dashboard.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krazy Keno Final</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>KRAZY KENO FINAL</h1>
-  <div id="content">Loading...</div>
+  <div id="dashboard-container">
+    <img src="logoKK.png" alt="Krazy Keno Logo" id="logo" />
+    <h1>KRAZY KENO FINAL</h1>
+    <p id="loading">Loading data...</p>
+    <div id="keno-data"></div>
+    <div id="blackjack-data"></div>
+    <div id="map" style="height:400px;width:100%;"></div>
+  </div>
+  <script src="supabase.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
